@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
+    --title-grey: #4b4b4b;
     --dark-grey: #333333;
     --light-grey: #808080;
     --yellow: #FFB612;
@@ -34,4 +35,15 @@
     src: url(./assets/gotham-light-webfont.woff2);
     font-weight: 300;
     font-style: normal;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
+
+*{
+    font-family: 'Gotham';
+    margin:0;
+    padding:0;
 }
