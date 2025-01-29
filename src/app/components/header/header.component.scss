@@ -1,0 +1,49 @@
+@mixin espacamento-grupo-vertical($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+
+.logo-div{
+
+    $logo-height: 8vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $logo-height;
+    padding: calc($logo-height / 2) 0vw;
+    background-color: black;
+
+    .logo{
+        height: 100%;
+    }
+
+}
+
+.texto-div {
+    @include espacamento-grupo-vertical(5vh);
+    padding: 5vh 10vw;
+
+    h1 {
+        text-transform: uppercase;
+        line-height: 1.3;
+        color: var(--title-grey);
+    }
+
+    .titulo-div {
+        @include espacamento-grupo-vertical(2vh);
+
+        #linha-divisoria {
+            width: 8vw;
+            height: 10px;
+            background-color: var(--title-grey);
+        }
+    }
+
+    p{
+        color: var(--dark-grey);
+    }
+
+}
