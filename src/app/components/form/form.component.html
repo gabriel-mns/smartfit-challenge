@@ -9,8 +9,8 @@
     
             <div class="linha-opcao">
                 <div class="esquerda">
-                    <input type="radio" name="periodo" id="opcao-manha">
-                    <label for="periodo">Manhã</label>
+                    <input type="radio" value="manha" name="periodo" id="opcao-manha" formControlName="periodo">
+                    <label for="opcao-manha">Manhã</label>
                 </div>
                 <div class="direita">
                     <span>06:00 às 12:00</span>
@@ -19,8 +19,8 @@
     
             <div class="linha-opcao">
                 <div class="esquerda">
-                    <input type="radio" name="periodo" id="opcao-tarde">
-                    <label for="periodo">Tarde</label>
+                    <input type="radio" value="tarde" name="periodo" id="opcao-tarde" formControlName="periodo">
+                    <label for="opcao-tarde">Tarde</label>
                 </div>
                 <div class="direita">
                     <span>12:01 às 18:00</span>
@@ -29,8 +29,8 @@
     
             <div class="linha-opcao">
                 <div class="esquerda">
-                    <input type="radio" name="periodo" id="opcao-noite" formControlName="periodo">
-                    <label for="periodo">Noite</label>
+                    <input type="radio" value="noite" name="periodo" id="opcao-noite" formControlName="periodo">
+                    <label for="opcao-noite">Noite</label>
                 </div>
                 <div class="direita">
                     <span>18:01 às 23:00</span>
@@ -44,7 +44,7 @@
                 <label for="mostrarFechadas">Exibir unidades fechadas</label>
             </div>
             <div class="direita">
-                Resultados encontrados: <span>{{resultadosFiltrados.length}}</span>
+                Resultados encontrados: <span>{{unidades.length}}</span>
             </div>
         </div>
 

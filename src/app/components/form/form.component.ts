@@ -1,7 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { UnidadeService } from '../../services/busca-unidades.service';
 import { Unidade } from '../../types/unidade.interface';
+import { FiltrarUnidadesService } from '../../services/filtrar-unidades.service';
+
+type HORARIO_INDICES = 'manha' | 'tarde' | 'noite';
+
+const HORARIO_FUNCIONAMENTO = {
+    manha:{
+        inicio: 6,
+        fim: 12
+    },
+    tarde:{
+        inicio: 12,
+        fim: 18
+    },
+    noite:{
+        inicio: 18,
+        fim: 23
+    }
+}
+
 
 @Component({
     selector: 'app-form',
@@ -9,45 +28,44 @@ import { Unidade } from '../../types/unidade.interface';
     templateUrl: './form.component.html',
     styleUrl: './form.component.scss'
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnInit{
 
-    resultados: Unidade[] = [];
-    resultadosFiltrados: Unidade[] = [];
     formularioAcademias !: FormGroup;
+    unidades: Unidade[] = [];
 
-    constructor(private formBuilder:FormBuilder, private unidadeService:UnidadeService){ }
+    constructor(private formBuilder:FormBuilder, private filtrarUnidadesService:FiltrarUnidadesService){ }
 
-    ngOnInit(): void {
-        
-        console.log("hey");
+    private setarTodasUnidades():void {
+        this.unidades = this.filtrarUnidadesService.buscarTodasUnidades();
+    }
 
-        this.unidadeService.buscaTodasUnidades().subscribe(data =>{
-            this.resultados = data.locations;
-            this.resultadosFiltrados = data.locations;
-        });
+    ngOnInit():void {
 
         this.formularioAcademias = this.formBuilder.group({
             periodo: '',
             mostrarFechadas: false
         })
 
+        this.setarTodasUnidades();
+        
     }
 
-    onSubmit(){
+    onSubmit():void {
 
-        if(!this.formularioAcademias.value.mostrarFechadas){
+        // Filtro por horário
+        const horarioEscolhido = HORARIO_FUNCIONAMENTO[this.formularioAcademias.value.periodo as HORARIO_INDICES];
+        const mostrarFechadas  = this.formularioAcademias.value.mostrarFechadas;   
 
-            this.resultadosFiltrados = this.resultados;
-
-        } else {
-
-            this.resultadosFiltrados = this.resultados.filter(unidade => unidade.opened);
-
-        }
+        this.unidades = this.filtrarUnidadesService
+            .filtrarUnidades(
+                horarioEscolhido.inicio,
+                horarioEscolhido.fim,
+                mostrarFechadas
+            );
 
     }
 
-    onClean(){
+    onClean():void {
 
         this.formularioAcademias.reset();
 
