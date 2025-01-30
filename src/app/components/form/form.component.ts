@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { UnidadeService } from '../../services/busca-unidades.service';
+import { Unidade } from '../../types/unidade.interface';
 
 @Component({
     selector: 'app-form',
@@ -10,7 +11,8 @@ import { UnidadeService } from '../../services/busca-unidades.service';
 })
 export class FormComponent implements OnInit {
 
-    resultados = [];
+    resultados: Unidade[] = [];
+    resultadosFiltrados: Unidade[] = [];
     formularioAcademias !: FormGroup;
 
     constructor(private formBuilder:FormBuilder, private unidadeService:UnidadeService){ }
@@ -19,7 +21,10 @@ export class FormComponent implements OnInit {
         
         console.log("hey");
 
-        this.unidadeService.buscaTodasUnidades().subscribe(data => console.log(data));
+        this.unidadeService.buscaTodasUnidades().subscribe(data =>{
+            this.resultados = data.locations;
+            this.resultadosFiltrados = data.locations;
+        });
 
         this.formularioAcademias = this.formBuilder.group({
             periodo: '',
@@ -30,7 +35,15 @@ export class FormComponent implements OnInit {
 
     onSubmit(){
 
-        console.log("submit");
+        if(!this.formularioAcademias.value.mostrarFechadas){
+
+            this.resultadosFiltrados = this.resultados;
+
+        } else {
+
+            this.resultadosFiltrados = this.resultados.filter(unidade => unidade.opened);
+
+        }
 
     }
 
