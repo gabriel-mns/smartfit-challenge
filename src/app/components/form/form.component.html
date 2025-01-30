@@ -1,0 +1,56 @@
+<form action="">
+    <div class="form-body">
+        <div class="title-div">
+            <img src="/icon-hour.png" alt="ícone de relógio">
+            <span>Horário</span>
+        </div>
+        <h2>Qual período quer treinar?</h2>
+        <div class="form-group">
+    
+            <div class="linha-opcao">
+                <div class="esquerda">
+                    <input type="radio" name="manha" id="opcao-manha">
+                    <label for="opcao-manha">Manhã</label>
+                </div>
+                <div class="direita">
+                    <span>06:00 às 12:00</span>
+                </div>
+            </div>
+    
+            <div class="linha-opcao">
+                <div class="esquerda">
+                    <input type="radio" name="tarde" id="opcao-tarde">
+                    <label for="opcao-tarde">Tarde</label>
+                </div>
+                <div class="direita">
+                    <span>12:01 às 18:00</span>
+                </div>
+            </div>
+    
+            <div class="linha-opcao">
+                <div class="esquerda">
+                    <input type="radio" name="noite" id="opcao-noite">
+                    <label for="opcao-noite">Noite</label>
+                </div>
+                <div class="direita">
+                    <span>18:01 às 23:00</span>
+                </div>
+            </div>
+    
+        </div>
+        <div class="linha-final">
+            <div class="esquerda">
+                <input type="checkbox" name="exibir-unidades-fechadas" id="unidades-fechadas">
+                <label for="unidades-fechadas">Exibir unidades fechadas</label>
+            </div>
+            <div class="direita">
+                Resultados encontrados: {{resultados.length}}
+            </div>
+        </div>
+
+        <div class="opcoes">
+            <button type="submit">Encontrar Unidades</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </div>
+</form>

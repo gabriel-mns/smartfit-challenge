@@ -1,0 +1,105 @@
+form{
+
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 10vw;
+
+    .form-body{
+    
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--lighter-grey);
+        border-radius: 5px;
+        padding: 3vh 2vw;
+        gap: 2.5vh;
+    
+        .title-div{
+    
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 1vw;
+    
+            img{
+                height: 4.5vh;
+            }
+
+            span{
+                font-weight: 500;
+                color: var(--light-grey);
+            }
+
+        }
+    
+        h2{
+            color: var(--light-grey);
+            font-weight: 300;
+            margin-top: 2vh;
+
+            padding-bottom: 2vh;
+            border-bottom: 1px solid var(--lighter-grey);
+
+        }
+
+        .form-group{
+            
+            color: var(--title-grey);
+
+            .linha-opcao{
+
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--lighter-grey);
+                padding: 2vh 0vw;
+
+            }
+
+        }
+
+        .linha-final{
+
+            display: flex;
+            justify-content:space-between;
+            margin: 3vh 0vw;
+
+        }
+
+        .opcoes{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:2vw;
+
+            button{
+                width: 33%;
+                padding: 2vh 5vw ;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                border: 1px solid var(--light-grey);
+                border-radius: 5px;
+                cursor: pointer;
+                
+            }
+
+            button[type="submit"]{
+                background-color: var(--yellow);
+            }
+            
+            button[type="reset"]{
+                background-color: transparent;
+            }
+
+        }
+
+    }
+    
+}
+
+.esquerda{
+
+    display: flex;
+    gap: 0.3rem;
+
+}
