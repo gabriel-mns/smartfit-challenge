@@ -1,5 +1,7 @@
 form{
 
+    font-size: 1.1rem;
+
     display: flex;
     flex-direction: column;
     padding: 5vh 10vw;
@@ -62,24 +64,31 @@ form{
             justify-content:space-between;
             margin: 3vh 0vw;
 
+            .direita span{
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
         }
 
         .opcoes{
 
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             gap:2vw;
 
             button{
+
                 width: 33%;
                 padding: 2vh 5vw ;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 text-transform: uppercase;
                 font-weight: 700;
                 border: 1px solid var(--light-grey);
                 border-radius: 5px;
                 cursor: pointer;
+                
                 
             }
 
@@ -101,5 +110,36 @@ form{
 
     display: flex;
     gap: 0.3rem;
+
+}
+
+@media(max-width: 768px){
+
+    form
+    .form-body{
+        
+        padding: 3vh 5vw;
+
+        .linha-final{
+    
+            padding: 0vh 0;
+            flex-direction: column;
+            gap: 0.75vh;
+            
+        }
+    
+        .opcoes{
+            
+            flex-direction: column;
+            gap: 0.5vh;
+    
+            button{
+                width: 100%;
+                margin: 1vh 0;
+            }
+    
+        }
+    }
+
 
 }
