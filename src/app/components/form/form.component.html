@@ -1,4 +1,4 @@
-<form action="">
+<form [formGroup]="formularioAcademias">
     <div class="form-body">
         <div class="title-div">
             <img src="/icon-hour.png" alt="ícone de relógio">
@@ -9,8 +9,8 @@
     
             <div class="linha-opcao">
                 <div class="esquerda">
-                    <input type="radio" name="manha" id="opcao-manha">
-                    <label for="opcao-manha">Manhã</label>
+                    <input type="radio" name="periodo" id="opcao-manha">
+                    <label for="periodo">Manhã</label>
                 </div>
                 <div class="direita">
                     <span>06:00 às 12:00</span>
@@ -19,8 +19,8 @@
     
             <div class="linha-opcao">
                 <div class="esquerda">
-                    <input type="radio" name="tarde" id="opcao-tarde">
-                    <label for="opcao-tarde">Tarde</label>
+                    <input type="radio" name="periodo" id="opcao-tarde">
+                    <label for="periodo">Tarde</label>
                 </div>
                 <div class="direita">
                     <span>12:01 às 18:00</span>
@@ -29,8 +29,8 @@
     
             <div class="linha-opcao">
                 <div class="esquerda">
-                    <input type="radio" name="noite" id="opcao-noite">
-                    <label for="opcao-noite">Noite</label>
+                    <input type="radio" name="periodo" id="opcao-noite" formControlName="periodo">
+                    <label for="periodo">Noite</label>
                 </div>
                 <div class="direita">
                     <span>18:01 às 23:00</span>
@@ -40,8 +40,8 @@
         </div>
         <div class="linha-final">
             <div class="esquerda">
-                <input type="checkbox" name="exibir-unidades-fechadas" id="unidades-fechadas">
-                <label for="unidades-fechadas">Exibir unidades fechadas</label>
+                <input type="checkbox" name="mostrarFechadas" formControlName="mostrarFechadas">
+                <label for="mostrarFechadas">Exibir unidades fechadas</label>
             </div>
             <div class="direita">
                 Resultados encontrados: {{resultados.length}}
@@ -49,8 +49,8 @@
         </div>
 
         <div class="opcoes">
-            <button type="submit">Encontrar Unidades</button>
-            <button type="reset">Limpar</button>
+            <button type="submit" (click)="onSubmit()">Encontrar Unidades</button>
+            <button type="reset" (click)="onClean()">Limpar</button>
         </div>
     </div>
 </form>
