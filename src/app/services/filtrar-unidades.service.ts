@@ -20,8 +20,8 @@ export class FiltrarUnidadesService {
 
 	private inicializarUnidades(): void {
 
-        this.unidadeService.buscaTodasUnidades().subscribe( data => {
-            this.unidades = data.locations;
+        this.unidadeService.buscarTodasUnidades().subscribe( data => {
+            this.unidades = data;
         });
 
     }
@@ -55,6 +55,8 @@ export class FiltrarUnidadesService {
 										horarioInicioCliente, 
 										horarioFimCliente
 									));
+
+        this.unidadeService.setarUnidadesFiltradas(unidadesFiltradas);
 
 		return unidadesFiltradas;
 
