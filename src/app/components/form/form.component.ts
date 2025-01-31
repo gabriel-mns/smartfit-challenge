@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { UnidadeService } from '../../services/busca-unidades.service';
 import { Unidade } from '../../types/unidade.interface';
@@ -30,6 +30,7 @@ const HORARIO_FUNCIONAMENTO = {
 })
 export class FormComponent implements OnInit{
 
+    @Output() submitEvent = new EventEmitter();
     formularioAcademias !: FormGroup;
     unidades: Unidade[] = [];
 
@@ -62,6 +63,8 @@ export class FormComponent implements OnInit{
                 horarioEscolhido.fim,
                 mostrarFechadas
             );
+
+        this.submitEvent.emit();
 
     }
 

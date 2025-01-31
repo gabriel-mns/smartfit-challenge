@@ -1,0 +1,61 @@
+$margin-padrao:5vh 10vw;
+
+.lista-legendas{
+
+    display: flex;
+    background-color: var(--lighter-grey);
+    margin: $margin-padrao;
+    justify-content: space-between;
+    gap: 5%;
+    padding: 3vh 2vw;
+    border-radius: 5px;
+
+}
+
+.legenda{
+    
+    align-items: center;
+    display: flex;
+    flex-direction:  column;
+    gap: 2vh;
+    
+}
+
+.titulo-descricao{
+
+    font-weight: bold;
+
+}
+
+.lista-descricao{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.descricao{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+
+    img{
+
+        width: 75%;
+
+    }
+
+}
+
+.lista-container{
+
+    margin: $margin-padrao;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1vw;
+    row-gap: 3vh;
+
+}

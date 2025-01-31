@@ -1,0 +1,52 @@
+<div class="cartao-div">
+    <span class="status">
+
+        Aberto
+        <!-- {{unidade.opened ? 'Aberto' : 'Fechado'}} -->
+    </span>
+    <h3 class="nome">
+        Nome Academia
+        <!-- {{unidade.title}} -->
+    </h3>
+    <p class="endereco">
+        Rua Mato Grosso
+        <!-- {{unidade.content}} -->
+    </p>
+    <div class="restricoes">
+        <img src="/required-mask.png" class="imagemRestricoes">
+        <img src="/required-mask.png" class="imagemRestricoes">
+        <img src="/required-mask.png" class="imagemRestricoes">
+        <img src="/required-mask.png" class="imagemRestricoes">
+    </div>
+    <div class="horariosFuncionamento">
+        <div>
+            <span class="dia"> Seg. Sex</span>
+            <span> 12 as 16 </span>
+        </div>
+        <div>
+            <span class="dia"> Seg. Sex</span>
+            <span> 12 as 16 </span>
+        </div>
+        <div>
+            <span class="dia"> Seg. Sex</span>
+            <span> 12 as 16 </span>
+        </div>
+    </div>
+    <!-- </div>
+    @if (unidade.schedules) {
+
+        <div class="horariosFuncionamento">
+
+        @for (horario of unidade.schedules; track $index) {
+
+                <div>
+                    <span> {{horario.weekdays}}</span>
+                    <span> {{horario.hour}} </span>
+                </div>
+
+        }
+
+        </div>
+
+    } -->
+</div>

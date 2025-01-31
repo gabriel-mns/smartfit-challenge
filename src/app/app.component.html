@@ -1,3 +1,7 @@
 <app-header></app-header>
-<app-form></app-form>
+
+<app-form (submitEvent)="whenSubmitted()"></app-form>
+
+<app-lista-cartoes *ngIf="(mostrarLista | async)" [listaUnidades]="listaUnidades"></app-lista-cartoes>
+
 <router-outlet />

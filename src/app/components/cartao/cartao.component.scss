@@ -1,0 +1,75 @@
+.status{
+    font-weight: 700;
+}
+
+.red{
+    color: var(--red);
+}
+
+.cartao-div{
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lighter-grey);
+    padding: 2vh;
+    max-width: 17vw;
+    min-height: 50vh;
+    border-radius: 5px;
+    gap: 2vh;
+
+}
+
+.nome{
+
+    color: var(--title-grey);
+
+}
+
+.endereco{
+
+    border-bottom: 2px solid #c9c9c9;
+    padding-bottom: 2vh;
+    color: var(--light-grey);
+    font-weight: 500;
+
+}
+
+.restricoes{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+
+}
+
+.imagemRestricoes{
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 25%;
+    min-width: 60px;
+
+}
+
+.horariosFuncionamento{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10%;
+    color: var(--title-grey);
+
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dia{
+
+        font-weight: bold;
+        font-size: 1.1em;
+
+    }
+
+}
