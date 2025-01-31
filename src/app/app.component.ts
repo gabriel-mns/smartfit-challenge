@@ -7,7 +7,6 @@ import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { Unidade } from './types/unidade.interface';
 import { UnidadeService } from './services/busca-unidades.service';
-import { CartaoComponent } from "./components/cartao/cartao.component";
 
 @Component({
   selector: 'app-root',
