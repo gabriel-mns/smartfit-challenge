@@ -1,52 +1,31 @@
 <div class="cartao-div">
-    <span class="status">
-
-        Aberto
-        <!-- {{unidade.opened ? 'Aberto' : 'Fechado'}} -->
+    <span [className]="unidade.opened ? 'status aberto' : 'status fechado'">
+        {{unidade.opened ? 'Aberto' : 'Fechado'}}
     </span>
     <h3 class="nome">
-        Nome Academia
-        <!-- {{unidade.title}} -->
+        {{unidade.title}}
     </h3>
-    <p class="endereco">
-        Rua Mato Grosso
-        <!-- {{unidade.content}} -->
-    </p>
+    <p class="endereco" [innerHTML]="unidade.content"></p>
     <div class="restricoes">
-        <img src="/required-mask.png" class="imagemRestricoes">
-        <img src="/required-mask.png" class="imagemRestricoes">
-        <img src="/required-mask.png" class="imagemRestricoes">
-        <img src="/required-mask.png" class="imagemRestricoes">
+        <img *ngIf="unidade.mask!=undefined"          [src]="'/' + unidade.mask          + '-mask.png'"      class="imagemRestricoes">
+        <img *ngIf="unidade.towel!=undefined"         [src]="'/' + unidade.towel         + '-towel.png'"     class="imagemRestricoes">
+        <img *ngIf="unidade.fountain!=undefined"      [src]="'/' + unidade.fountain      + '-fountain.png'"  class="imagemRestricoes">
+        <img *ngIf="unidade.locker_room!=undefined"   [src]="'/' + unidade.locker_room   + '-lockerroom.png'" class="imagemRestricoes">
     </div>
-    <div class="horariosFuncionamento">
-        <div>
-            <span class="dia"> Seg. Sex</span>
-            <span> 12 as 16 </span>
-        </div>
-        <div>
-            <span class="dia"> Seg. Sex</span>
-            <span> 12 as 16 </span>
-        </div>
-        <div>
-            <span class="dia"> Seg. Sex</span>
-            <span> 12 as 16 </span>
-        </div>
-    </div>
-    <!-- </div>
     @if (unidade.schedules) {
 
-        <div class="horariosFuncionamento">
+        <ul class="horariosFuncionamento">
 
         @for (horario of unidade.schedules; track $index) {
 
-                <div>
-                    <span> {{horario.weekdays}}</span>
+                <li>
+                    <span class="dia"> {{horario.weekdays}}</span>
                     <span> {{horario.hour}} </span>
-                </div>
+                </li>
 
         }
 
-        </div>
+        </ul>
 
-    } -->
+    }
 </div>

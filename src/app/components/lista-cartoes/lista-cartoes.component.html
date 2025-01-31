@@ -1,67 +1,31 @@
 <div class="lista-legendas">
-    <div class="legenda">
-        <span class="titulo-descricao">Máscara</span>
-        <div class="lista-descricao">
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-        </div>
-    </div>
-    <div class="legenda">
-        <span class="titulo-descricao">Máscara</span>
-        <div class="lista-descricao">
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
+
+    @for (legenda of legendas; track $index) {
+
+        <div class="legenda">
+            <span class="titulo-descricao">{{legenda.titulo}}</span>
+            <div class="lista-descricao">
+
+                @for (restricao of legenda.restricoes; track $index) {
+
+                    <div class="descricao">
+                        <img [src]="restricao.icone" alt="">
+                        <span>{{restricao.tipo}}</span>
+                    </div>
+
+                }
+
             </div>
         </div>
-    </div>
-    <div class="legenda">
-        <span class="titulo-descricao">Máscara</span>
-        <div class="lista-descricao">
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-        </div>
-    </div>
-    <div class="legenda">
-        <span class="titulo-descricao">Máscara</span>
-        <div class="lista-descricao">
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-            <div class="descricao">
-                <img src="/required-mask.png" alt="">
-                <span>Obrigatório</span>
-            </div>
-        </div>
-    </div>
+
+    }
 </div>
 
 <div class="lista-container">
-    <app-cartao></app-cartao>
-    <app-cartao></app-cartao>
-    <app-cartao></app-cartao>
-    <app-cartao></app-cartao>
-    <app-cartao></app-cartao>
-    <app-cartao></app-cartao>
+    @for (unidade of listaUnidades; track $index) {
+
+        <app-cartao [unidade]="unidade"></app-cartao>
+
+    }
+
 </div>

@@ -2,22 +2,32 @@
     font-weight: 700;
 }
 
-.red{
+.aberto{
+    color: var(--green);
+    font-weight: 700;
+}
+
+.fechado{
     color: var(--red);
+    font-weight: 700;
 }
 
 .cartao-div{
 
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     background-color: var(--lighter-grey);
-    padding: 2vh;
-    max-width: 17vw;
-    min-height: 50vh;
+    align-items: stretch;
     border-radius: 5px;
     gap: 2vh;
+    
+    width: 18vw;
+    height: 55vh;
+    padding: 2vh;
 
 }
+
 
 .nome{
 
@@ -60,7 +70,7 @@
     gap: 10%;
     color: var(--title-grey);
 
-    div{
+    li{
         display: flex;
         flex-direction: column;
     }
@@ -69,6 +79,39 @@
 
         font-weight: bold;
         font-size: 1.1em;
+
+    }
+
+}
+
+@media (max-width: 1349px){
+    
+    .cartao-div{
+        
+        width: 25vw;
+        height: 65vh;
+        
+    }
+
+}
+
+@media (max-width: 768px){
+    
+    .cartao-div{
+        
+        width: 38vw;
+        height: 75vh;
+        
+    }
+    
+}
+
+@media (max-width: 666px){
+
+    .cartao-div{
+        
+        width: 75vw;
+        padding: 5vh 8vw
 
     }
 
