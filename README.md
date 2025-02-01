@@ -7,16 +7,12 @@ Este projeto consiste na criação de uma interface para consulta da disponibili
 
 Agora, um ponto importante: este foi meu primeiro contato com Angular! Então, se você olhar o código e pensar "hmm, isso poderia estar melhor", é porque provavelmente poderia mesmo 😆. Mas o objetivo aqui não foi escrever o código mais limpo e manutenível, e sim explorar as possibilidades do Angular na prática. Basicamente, este projeto é uma prova de conceito para eu entender melhor o framework.
 
----
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **Angular**: Versão 19.1.4
 - **Git**
 - **GitHub Pages** (para deploy)
 
-
----
 
 ## 💻 Como Executar o Projeto Localmente
 
@@ -44,9 +40,7 @@ Agora, um ponto importante: este foi meu primeiro contato com Angular! Então, s
     ```
 
     A aplicação também está hospedada no [Github Pages](https://gabriel-mns.github.io/smartfit-challenge/).
-
----
-
+   
 ## 📋 Funcionalidades
 
 - Requisição HTTP para um endpoint que retorna um JSON com dados das unidades Smartfit.
@@ -54,8 +48,6 @@ Agora, um ponto importante: este foi meu primeiro contato com Angular! Então, s
   - Filtro por status (aberto/fechado).
   - Filtro por horário de funcionamento.
 - Exibição dos resultados com base nos filtros selecionados.
-
----
 
 ## ⚙️ Como funciona
 
@@ -88,8 +80,6 @@ Para usar a aplicação, é bem simples:
 A aplicação vai filtrar e exibir as academias que estão abertas no período selecionado, considerando o dia da semana em que a consulta está sendo feita.
 
 
----
-
 ## 🧠 Aprendizados e Dificuldades
 
 ### Aprendizados
@@ -116,8 +106,6 @@ A aplicação vai filtrar e exibir as academias que estão abertas no período s
 3. **Deploy para o Github Pages**: 
     Fazer o deploy de uma aplicação Angular no GitHub Pages foi um desafio. No começo, só aparecia ou o README, ou uma tela branca ou um erro 404. Além disso, queria que a URL ficasse limpa (`/smartfit-challenge`), mas inicialmente ficava algo como `smartfit-challenge/browser/smartfit-challenge/index.html`. Depois de fazer alguns ajustes nas configurações, tudo funcionou direitinho.
 
----
-
 ## ✅ Pontos de Melhoria
 - **Componentização**: 
     Acredito que dividir os componentes atuais em componentes menores seria uma boa ideia, especialmente se a aplicação crescer. Por exemplo, o título "Reabertura Smart Fit" no header poderia ser um componente reutilizável em outras páginas.
@@ -130,8 +118,6 @@ A aplicação vai filtrar e exibir as academias que estão abertas no período s
 
 - **Responsividade**:
     Como foi meu primeiro projeto responsivo, a estilização dos diferentes tamanhos de tela foi mais baseada no que eu via na minha tela do que em padrões de dispositivos reais. Em projetos futuros, pretendo me aprofundar mais em boas práticas de responsividade.
-
----
 
 ## 🔗 Links
 
