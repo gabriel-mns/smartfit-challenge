@@ -20,11 +20,11 @@ export class ListaCartoesComponent implements OnInit {
       restricoes:[
         {
           tipo: 'Obrigatório',
-          icone: '/required-mask.png'
+          icone: 'required-mask.png'
         },
         {
           tipo: 'Recomendado',
-          icone: '/recommended-mask.png'
+          icone: 'recommended-mask.png'
         }
       ]
     },
@@ -33,11 +33,11 @@ export class ListaCartoesComponent implements OnInit {
       restricoes:[
         {
           tipo: 'Obrigatório',
-          icone: '/required-towel.png'
+          icone: 'required-towel.png'
         },
         {
           tipo: 'Recomendado',
-          icone: '/recommended-towel.png'
+          icone: 'recommended-towel.png'
         }
       ]
     },
@@ -46,11 +46,11 @@ export class ListaCartoesComponent implements OnInit {
       restricoes:[
         {
           tipo: 'Parcial',
-          icone: '/partial-fountain.png'
+          icone: 'partial-fountain.png'
         },
         {
           tipo: 'Proibido',
-          icone: '/not_allowed-fountain.png'
+          icone: 'not_allowed-fountain.png'
         }
       ]
     },
@@ -59,11 +59,11 @@ export class ListaCartoesComponent implements OnInit {
       restricoes:[
         {
           tipo: 'Liberado',
-          icone: '/allowed-lockerroom.png'
+          icone: 'allowed-lockerroom.png'
         },
         {
           tipo: 'Proibido',
-          icone: '/closed-lockerroom.png'
+          icone: 'closed-lockerroom.png'
         }
       ]
     }
