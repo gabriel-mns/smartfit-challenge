@@ -2,23 +2,6 @@
     <img alt="Smartfit Challenge" src="./public/logo.svg" width="250px">
 </div>
 
-## 📄Sumário
-
-- [📄Sumário](#sumário)
-- [📖 Introdução](#-introdução)
-- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
-- [💻 Como Executar o Projeto Localmente](#-como-executar-o-projeto-localmente)
-- [📋 Funcionalidades](#-funcionalidades)
-- [⚙️ Como funciona](#️-como-funciona)
-  - [O código](#o-código)
-  - [A aplicação](#a-aplicação)
-- [🧠 Aprendizados e Dificuldades](#-aprendizados-e-dificuldades)
-  - [Aprendizados](#aprendizados)
-  - [Dificuldades Encontradas](#dificuldades-encontradas)
-- [✅ Pontos de Melhoria](#-pontos-de-melhoria)
-- [🔗 Links](#-links)
-
-
 ## 📖 Introdução
 Este projeto consiste na criação de uma interface para consulta da disponibilidade das academias da Smartfit durante o período da pandemia. O código foi desenvolvido com base no projeto apresentado pela Fernanda Kipper em seu vídeo no YouTube.
 
